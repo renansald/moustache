@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.add_cart_button{
+  border: 2px solid $dark-grey;
+  background-color: transparent;
+  color: $dark-grey;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px;
+  border-radius: 4px;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $dark-grey;
+    color: $font;
+    transition: 0.2s;
+  }
+}

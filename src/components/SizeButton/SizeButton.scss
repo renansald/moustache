@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.size-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid $light-grey;
+  text-align: center;
+  color: $light-grey;
+
+  &:hover{
+    background-color: $background;
+    color: $dark-grey;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  &__active{
+    background-color: $background;
+    color: $dark-grey;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+}

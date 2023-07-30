@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.menu__button{
+  border: 0;
+  background-color: transparent;
+  color: $font;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $light-grey;
+    color: $dark-grey;
+    transition: 0.2s;
+  }
+
+  &__lg{
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__sm{
+    display: none;
+
+    @media (max-width: $breakpoint-sm) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.menu__button__active{
+  background-color: #FFFFFF;
+  color: $dark-grey;
+  border: none
+}
+
+.cart-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px 0;
+  gap: 12px;
+
+  &__description{
+    color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

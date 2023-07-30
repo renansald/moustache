@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Simple e-commerce
+This project is a simple e-commerce page with only one product, where you can choose the size and add it to your cart.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
+To install this project, simply clone or download this repository.
 
-## Available Scripts
+You will need to have Node.js 19 or higher installed on your machine.
 
-In the project directory, you can run:
+You will also need to have Yarn installed. If you prefer, you can use other package managers like npm or pnpm.
 
-### `yarn start`
+After cloning the repository, navigate to the project directory and update all dependencies by running the following command:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+yarn
+#or
+npm install
+#or
+pnpm install
+```
+## Usage
+To start the development server, run the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+yarn start
+# or
+npm run start
+# or
+pnpm start
+```
+Open http://localhost:3000 in your browser to see the application.
 
-### `yarn test`
+## Test
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project includes two types of tests: E2E (end-to-end) tests and component tests, all created using Cypress.
 
-### `yarn build`
+To run component tests, use the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn test:component
+#or
+npm run test:component
+#or
+pnpm test:component
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run E2E tests, use the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn test:integration
+#or
+npm run test:integration
+#or
+pnpm test:integration
+```
+## Run on Docker
 
-### `yarn eject`
+Running this application in a Docker container allows you to see how the build will work and test it as a production environment.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run this application in a Docker container, you will need to have Docker installed. After that, just use the following commands:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+    docker build -t <name_of_image> . 
+    docker run -d -p 80:80 <name_of_image>
+```
+In the example above, I am redirecting the container port 80 to my computer's port 80, but you can change it as needed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+Contributions, such as bug fixes or new features, are always welcome. Feel free to submit a pull request.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.

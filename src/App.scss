@@ -1,0 +1,101 @@
+@import './styles/variables.scss';
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.header {
+  background-color: $background;
+  padding: 0 24px;
+  margin: 8px 12px 16px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 24px;
+  position: relative;
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 8px 0 16px;
+    padding: 0 12px;
+  }
+}
+
+.page__content{
+  display: flex;
+  height: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 10% 12px;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
+
+  &__image{
+    height: 600px; 
+    width: auto;
+
+    @media (max-width: $breakpoint-sm) {
+      height: auto; 
+      width: 100%;
+    }
+  }
+
+  &__description{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media(max-width: $breakpoint-sm){
+      margin-top: 16px;
+      gap: 4px;
+    }
+
+    h1{
+      color: $dark-grey;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    &--price{
+      width: 100%;
+      color: $dark-grey;
+      font-size: 16px;
+      font-weight: 700;
+      border-bottom: 1px solid $light-grey;
+      border-top: 1px solid $light-grey;
+      text-align: start;
+      padding: 4px 0;
+
+      @media(max-width: $breakpoint-sm){
+        border: none;
+      }
+    }
+
+    &--text{
+      color: $font;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: start;
+    }
+
+    &--size--title{
+      font-size: 12px;
+      margin-top: 8px;
+      text-transform: uppercase;
+      color: $font;
+
+      .required{
+        color: $error-requried;
+      }
+    }
+    &--size--buttons{
+      display: flex;
+      gap: 8px;
+      margin: 8px 0 20px 0;
+    }
+  }
+}
